@@ -114,8 +114,9 @@ var
 
     //Register Routes
     //If no route exists, it will throw an exception
-    HTTPRouter.RegisterRoute('/*', @DefaultRoute, True);
     HTTPRouter.RegisterRoute('/', @RootRoute, False);
+    HTTPRouter.RegisterRoute('/404', @DefaultRoute, True);
+
 
 
     WriteLn('Server starting on: ', sAddress, ':', sPort);
